@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { Inter } from '@next/font/google';
 import { ActionButton, Sidebar } from '../common';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { Box, Typography } from '@mui/material';
+import { Stack } from '@mui/system';
 
 // import styles from '@/styles/Home.module.css';
 
@@ -19,15 +21,39 @@ export default function Home() {
       </Head>
       <Sidebar />
       <main>
-        <h1>Invoice App</h1>
-        <ActionButton
-          bgcolor="#7C5DFA"
-          startIcon={
-            <AddCircleIcon sx={{ color: '#fff', width: 50, height: 50 }} />
-          }
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
         >
-          New Invoice
-        </ActionButton>
+          <Box>
+            <Typography
+              component="h1"
+              sx={{
+                fontSize: 32,
+                fontWeight: 700,
+                fontStyle: 'normal',
+                letterSpacing: 1,
+                color: '#0C0E16',
+              }}
+            >
+              Invoices
+            </Typography>
+            <Typography component="span" sx={{ color: '#888EB0' }}>
+              There are 4 pending invoices
+            </Typography>
+          </Box>
+          <Box>
+            <ActionButton
+              bgcolor="#7C5DFA"
+              startIcon={
+                <AddCircleIcon sx={{ color: '#fff', width: 50, height: 50 }} />
+              }
+            >
+              New Invoice
+            </ActionButton>
+          </Box>
+        </Stack>
       </main>
     </>
   );
