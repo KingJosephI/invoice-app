@@ -1,10 +1,11 @@
 import Head from 'next/head';
 // import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import { ActionButton, Sidebar } from '../common';
+import { ActionButton, Invoice, InvoicesList, Sidebar } from '../common';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Box, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
+import data from '../data/data.json';
 
 // import styles from '@/styles/Home.module.css';
 
@@ -54,6 +55,8 @@ export default function Home() {
             </ActionButton>
           </Box>
         </Stack>
+
+        <InvoicesList data={data} />
       </main>
     </>
   );

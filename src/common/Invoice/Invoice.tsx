@@ -4,26 +4,26 @@ import React from 'react';
 
 interface IInvoice extends React.HTMLProps<HTMLDivElement> {
   invoiceID?: string;
-  dueDate?: string;
+  paymentDue?: string;
   clientName?: string;
-  amount?: number;
+  total?: number;
   status?: string;
   // children?: React.ReactNode;
 }
 
 const Invoice = ({
   invoiceID = '',
-  dueDate = '',
+  paymentDue = '',
   clientName = '',
-  amount = 0,
+  total = 0,
   status,
 }: IInvoice) => {
   return (
     <Stack direction="row">
       <Typography>{invoiceID}</Typography>
-      <Typography>{dueDate}</Typography>
+      <Typography>{paymentDue}</Typography>
       <Typography>{clientName}</Typography>
-      <Typography>{amount}</Typography>
+      <Typography>{total}</Typography>
       <Typography>{status}</Typography>
     </Stack>
   );

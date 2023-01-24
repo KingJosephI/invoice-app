@@ -9,12 +9,12 @@ interface IInvoicesList {
 const InvoicesList = ({ data }: IInvoicesList) => {
   return (
     <Stack>
-      {data?.map(({ invoiceID, amount, dueDate, clientName, status }, key) => (
+      {data?.map(({ id, total, paymentDue, clientName, status }, key) => (
         <Invoice
           key={key}
-          invoiceID={invoiceID}
-          amount={amount}
-          dueDate={dueDate}
+          invoiceID={id}
+          total={total}
+          paymentDue={paymentDue}
           clientName={clientName}
           status={status}
         />
