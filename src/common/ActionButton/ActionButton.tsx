@@ -1,16 +1,15 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material';
-import buttonStyles from './Button.module.scss';
-// import { bgcolor } from '@mui/system';
+import buttonStyles from './ActionButton.module.scss';
 
-interface IButton extends React.BaseHTMLAttributes<HTMLButtonElement> {
+interface IButton extends React.HTMLProps<HTMLButtonElement> {
   text?: string;
-  startIcon?: string;
+  startIcon?: string | React.ReactNode;
   bgcolor?: string;
   children?: React.ReactNode;
 }
 
-const MyButton = ({
+const ActionButton = ({
   text = '',
   startIcon = '',
   bgcolor = '#333',
@@ -31,4 +30,4 @@ const MyButton = ({
   );
 };
 
-export default MyButton;
+export default ActionButton;

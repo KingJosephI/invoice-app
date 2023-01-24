@@ -1,8 +1,7 @@
 import Head from 'next/head';
 // import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import Sidebar from '../common/Sidebar/Sidebar';
-import ActionButton from '@/common/Button/Button';
+import { ActionButton, Sidebar } from '../common';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 // import styles from '@/styles/Home.module.css';
@@ -24,9 +23,7 @@ export default function Home() {
         <ActionButton
           bgcolor="#7C5DFA"
           startIcon={
-            <AddCircleIcon
-              sx={{ color: '#fff', width: 50, height: 50, marginRight: '16px' }}
-            />
+            <AddCircleIcon sx={{ color: '#fff', width: 50, height: 50 }} />
           }
         >
           New Invoice
